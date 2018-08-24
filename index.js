@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Image, ActivityIndicator, NetInfo, Platform } from 'react-native';
 import RNFS, { DocumentDirectoryPath } from 'react-native-fs';
@@ -292,15 +293,15 @@ class CacheableImage extends React.Component {
 }
 
 CacheableImage.propTypes = {
-    activityIndicatorProps: React.PropTypes.object,
+    activityIndicatorProps: PropTypes.object,
     defaultSource: Image.propTypes.source,
-    useQueryParamsInCacheKey: React.PropTypes.oneOfType([
-        React.PropTypes.bool,
-        React.PropTypes.array
+    useQueryParamsInCacheKey: PropTypes.oneOfType([
+        PropTypes.bool,
+        PropTypes.array
     ]),
-    checkNetwork: React.PropTypes.bool,
-    networkAvailable: React.PropTypes.bool,
-    downloadInBackground: React.PropTypes.bool
+    checkNetwork: PropTypes.bool,
+    networkAvailable: PropTypes.bool,
+    downloadInBackground: PropTypes.bool
 };
 
 CacheableImage.defaultProps = {
